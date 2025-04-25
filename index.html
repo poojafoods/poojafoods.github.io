@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pooja Foods - Wholesale Namkeen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="overlay" id="customOverlay"></div>
+  <div class="custom-alert" id="customAlertBox">
+    <h2>Alert</h2>
+    <p id="customAlertMessage"></p>
+    <button onclick="closeCustomAlert()">OK</button>
+  </div>
+
+  <header>
+    <h1><a href="index.html">Pooja Foods</a></h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#products">Products</a>
+      <a href="#checkout">Checkout</a>
+      <a href="about.html">About Us</a>
+    </nav>
+  </header>
+
+  <div class="container" id="products">
+    <h2>Our Products</h2>
+    <div class="products" id="product-list"></div>
+  </div>
+
+  <div class="container" id="checkout">
+    <h2>Checkout</h2>
+
+    <div class="cart-section">
+      <h3>Your Cart</h3>
+      <div id="cart-items"></div>
+      <p class="cart-total">Total: ₹<span id="cart-total">0</span></p>
+      <button onclick="proceedToCheckout()">Proceed to Checkout</button>
+    </div>
+
+    <div class="checkout-details">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Enter your full name">
+      <label for="address">Address</label>
+      <input type="text" id="address" placeholder="Enter your address">
+      <label for="contact">Contact</label>
+      <input type="text" id="contact" placeholder="Enter contact number">
+      <label for="payment">Select Payment Method</label>
+      <select id="payment">
+        <option value="upi">UPI</option>
+        <option value="cod">Cash on Delivery</option>
+      </select>
+      <button onclick="confirmOrder()">Confirm Order</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
